@@ -6,4 +6,5 @@ file = Path.cwd()/"csv_reprts"/"summary_report.txt"
 
 def profitloss_function(forex):
     with file.open(mode= 'a', encoding = 'UTF-8', newline = '') as text:
-#        with fp.open(mode="r", newline=''):
+        with fp.open(mode="r", newline='') as pal:
+            next(pal)
