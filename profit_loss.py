@@ -14,4 +14,6 @@ def profitloss_function(forex):
             for line in pal.readlines():
                 line = re.findall(r'[0-9]+.', line)
                 npdiff = float(line[4]) - prevday
-                print(npdiff)
+                prevday = float(line[4])
+
+                
