@@ -19,7 +19,9 @@ def coh_function(forex):
             # Let variables prevday and cohdiff be 0
 
             for line in coh.readlines():
+                # Read cash-on-hand-usd.csv line by line
                 line = re.findall(r'[0-9]+.', line)
+                # Find all the Cash on hand data
                 cohdiff = float(line[1]) - prevday
                 prevday = float(line[1])
 
