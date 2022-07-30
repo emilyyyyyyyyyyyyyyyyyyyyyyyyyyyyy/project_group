@@ -2,7 +2,7 @@ from pathlib import Path
 import re
 
 fp = Path.cwd()/"csv_reports"/"profit-and-loss-usd.csv"
-file = Path.cwd()/"csv_reprts"/"summary_report.txt"
+file = Path.cwd()/"csv_reports"/"summary_report.txt"
 
 def profitloss_function(forex):
     with file.open(mode= 'a', encoding = 'UTF-8', newline = '') as text:
@@ -18,6 +18,5 @@ def profitloss_function(forex):
 
                 if npdiff <0:
                     npdiff = abs(npdiff)
-                    text.writelines(f'[PROFIT DEFICIT] DAY: {line[0]}, AMOUNT: SGD{npdiff*forex}')
-                else:
-                    text.writelines('[NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY')
+                    text.writelines(f'[PROFIT DEFICIT] DAY: {line[0]} AMOUNT: SGD{npdiff*forex}\n')
+                
