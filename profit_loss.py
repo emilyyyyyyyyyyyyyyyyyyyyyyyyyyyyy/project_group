@@ -18,4 +18,6 @@ def profitloss_function(forex):
 
                 if npdiff <0:
                     npdiff = abs(npdiff)
-                    print (npdiff)
+                    text.writelines(f'[PROFIT DEFICIT] DAY: {line[0]}, AMOUNT: SGD{npdiff*forex}')
+                else:
+                    text.writelines(['[NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY'])
