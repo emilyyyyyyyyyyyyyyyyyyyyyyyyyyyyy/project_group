@@ -13,7 +13,7 @@ def api_function():
         api_key = "6B4S1U6RBFT3Q19Q"
         url = f"https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=SGD&apikey={api_key}"
         api = requests.get(url)
-        api = api.jon()
+        api = api.json()
         # Get the api url
 
         api = json.dumps(api, indent=4)
