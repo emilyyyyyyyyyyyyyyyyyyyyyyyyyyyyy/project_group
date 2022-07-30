@@ -30,4 +30,5 @@ def coh_function(forex):
                 if cohdiff <0:
                 # If Cash on hand is less than 0
                     cohdiff = abs (cohdiff)
+                    # Make it positive
                     text.writelines(f"[CASH DEFICIT] DAY: {line[0]} AMOUNT: SGD{cohdiff*forex}\n")
