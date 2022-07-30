@@ -18,4 +18,4 @@ def profitloss_function(forex):
 
                 if npdiff <0:
                     npdiff = abs(npdiff)
-                    
+                    print (npdiff)
