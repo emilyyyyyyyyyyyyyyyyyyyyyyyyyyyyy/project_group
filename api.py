@@ -17,7 +17,7 @@ def api_function():
         # Get the api url
 
         api = json.dumps(api, indent=4)
-        # Make the output neater
+        # Arrange the output in a neat way
         pattern = 'Exchange Rate": ".+'
         api = re.search(pattern, api)
         ER = api.group(0).strip('Exchange Rate":"').strip('",')
