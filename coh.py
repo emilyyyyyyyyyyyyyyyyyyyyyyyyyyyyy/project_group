@@ -9,3 +9,5 @@ def coh_function(forex):
         with fp.open(mode="r", newline='') as coh:
             next(coh)
             prevday=0
+            cohdiff=0
+            
