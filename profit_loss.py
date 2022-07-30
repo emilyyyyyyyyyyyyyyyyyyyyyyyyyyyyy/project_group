@@ -16,4 +16,6 @@ def profitloss_function(forex):
                 npdiff = float(line[4]) - prevday
                 prevday = float(line[4])
 
-                
+                if npdiff <0:
+                    npdiff = abs(npdiff)
+                    
