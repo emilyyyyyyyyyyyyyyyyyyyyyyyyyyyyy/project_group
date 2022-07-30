@@ -13,7 +13,7 @@ def overhead_function(forex):
     #Create a function
     with file.open(mode = 'a', encoding = 'UTF-8', newline = '') as text:
     #Open the summary_report text file 
-        with fp.open(mode='r', mewline='') as overheads:
+        with fp.open(mode='r', newline='') as overheads:
             #Open the file
             next(overheads)
             #Skip the header
