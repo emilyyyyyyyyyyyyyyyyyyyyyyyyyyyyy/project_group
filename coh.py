@@ -1,5 +1,5 @@
 from pathlib import Path
-import re 
+import re
 
 fp = Path.cwd()/"csv_reports"/"cash-on-hand-usd.csv"
 # Create a file path to cash-on-hand-usd.csv
@@ -9,9 +9,9 @@ file = Path.cwd()/"csv_reports"/"summary_report.txt"
 def coh_function(forex):
     # Create a function
     with file.open(mode = 'a', encoding = 'UTF-8', newline = '') as text:
-    # Open the summary_report text file
-        with fp. open(mode="r", newline='') as coh:
-        # Open the cash-on-hand-usd csv file
+        # Open the summary_report as text file
+        with fp.open(mode="r", newline='') as coh:
+            # Open the cash-on-hand-usd csv file
             next(coh)
             # Skip the header
             prevday=0
@@ -29,7 +29,7 @@ def coh_function(forex):
 
                 if cohdiff <0:
                 # If Cash on hand is less than 0
-                    cohdiff = abs(cohdiff)
+                    cohdiff = abs (cohdiff)
                     # Make it positive
                     text.writelines(f"[CASH DEFICIT] DAY: {line[0]} AMOUNT: SGD{cohdiff*forex}\n")
-                    # Write [CASH DEFICIT] DAY: with the variable line [0], AMOUNT: SGD with the variable cohdiff*forex"
+                    # Write [CASH DEFICIT] DAY: with the variable line [0], AMOUNT: SGD with the variable cohdiff"forex"
