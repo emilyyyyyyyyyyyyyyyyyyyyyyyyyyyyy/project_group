@@ -32,3 +32,4 @@ def coh_function(forex):
                     cohdiff = abs (cohdiff)
                     # Make it positive
                     text.writelines(f"[CASH DEFICIT] DAY: {line[0]} AMOUNT: SGD{cohdiff*forex}\n")
+                    # Write [CASH DEFICIT] DAY: with the variable line [0], AMOUNT: SGD with the variable cohdiff"forex"
