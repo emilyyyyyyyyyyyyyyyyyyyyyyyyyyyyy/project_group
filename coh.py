@@ -23,6 +23,7 @@ def coh_function(forex):
                 line = re.findall(r'[0-9]+.', line)
                 # Find all the Cash on hand data
                 cohdiff = float(line[1]) - prevday
+                # Make cohdiff be the line of data minus the previous line of data for cash on hand
                 prevday = float(line[1])
 
                 if cohdiff <0:
