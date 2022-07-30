@@ -3,7 +3,7 @@ import re
 
 
 
-fp = Path.cwd()/"csv_reports"/"overheads-day-41.csv"
+fp = Path.cwd()/"csv_reports"/"overheads-day-42.csv"
 #Create a file path to overheads-day-41.csv
 file = Path.cwd()/"csv_reports"/"summary_report.txt"
 #Create a file path to file summary_report 
@@ -20,14 +20,13 @@ def overhead_function(forex):
             max_value = float(0)
             #Let variable max_value be float 0
 
-
             for line in overheads.readlines():
             #Read overheads-day-41.csv line by line 
                 line = line.split(",")
                 #split the line on ","
                 category =  line[0].strip('"').strip('"').upper()
                 #Find the respective  categories
-                overheads = re.findall(r'[0-9].+' , line[1]) emily this is the line
+                overheads = re.findall(r'[0-9].+[0-9].+' , line[1]) 
                 #Find the overhead values
                 a = float(overheads[0])
                 #Let variable a be overhead values
