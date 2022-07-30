@@ -15,3 +15,7 @@ def coh_function(forex):
                 line = re.findall(r'[0-9]+.', line)
                 cohdiff = float(line[1]) - prevday
                 prevday = float(line[1])
+
+                if cohdiff <0:
+                    cohdiff = abs (cohdiff)
+                    
