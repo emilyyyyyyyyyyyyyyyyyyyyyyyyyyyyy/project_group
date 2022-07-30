@@ -25,6 +25,7 @@ def coh_function(forex):
                 cohdiff = float(line[1]) - prevday
                 # Make cohdiff be the line of data minus the previous line of data for cash on hand
                 prevday = float(line[1])
+                # Make prevday be the line of data for cash of hand
 
                 if cohdiff <0:
                     cohdiff = abs (cohdiff)
