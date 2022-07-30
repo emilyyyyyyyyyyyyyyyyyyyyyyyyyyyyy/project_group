@@ -2,9 +2,12 @@ from pathlib import Path
 import re
 
 fp = Path.cwd()/"csv_reports"/"cash-on-hand-usd.csv"
+# Create a file path to cash-on-hand-usd.csv
 file = Path.cwd()/"csv_reports"/"summary_report.txt"
+# Create a file path to file summary_report
 
 def coh_function(forex):
+    
     with file.open(mode = 'a', encoding = 'UTF-8', newline = '') as text:
         with fp.open(mode="r", newline='') as coh:
             next(coh)
