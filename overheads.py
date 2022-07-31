@@ -1,7 +1,7 @@
 from pathlib import Path
 import re
 
-fp = Path.cwd()/"csv_reports"/"overheads-day-42.csv"
+file_path = Path.cwd()/"csv_reports"/"overheads-day-42.csv"
 # Create a file path to overheads-day-41.csv
 file = Path.cwd()/"csv_reports"/"summary_report.txt"
 # Create a file path to file summary_report 
@@ -11,7 +11,7 @@ def overhead_function(forex):
 # Create a function that requires parameter: forex
     with file.open(mode = 'a', encoding = 'UTF-8', newline = '') as text:
     # Open the summary_report text file 
-        with fp.open(mode='r', newline='') as overheads:
+        with file_path.open(mode='r', newline='') as overheads:
         # Open the file
             next(overheads)
             # Skip the header
