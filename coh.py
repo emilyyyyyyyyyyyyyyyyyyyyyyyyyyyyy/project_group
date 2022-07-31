@@ -28,8 +28,6 @@ def coh_function(forex):
                 # Make cohdiff be the line of data minus the previous line of data for cash on hand
                 prevday = float(line[1])
                 # Make prevday be the line of data for cash of hand
-                cash=1
-                # Let cash be 1
 
                 if cohdiff <0:
                 # If Cash on hand is less than 0
@@ -40,7 +38,7 @@ def coh_function(forex):
                     cash=0
                     # The variable cash will be 0
             
-            if cash ==1:
+            if cash==1:
             # If variable cash is really 1
                 text.writelines("[CASH SURPLUS] CASH ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY")
                 # Write [CASH SURPLUS] CASH ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY
