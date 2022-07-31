@@ -21,7 +21,7 @@ def api_function():
         pattern = 'Exchange Rate": ".+'
         api = re.search(pattern, api)
         ER = api.group(0).strip('Exchange Rate":"').strip('",')
-        # Extract the exchange rate and strip
+        # Extract the exchange rate
 
 
         ER = float(ER)
