@@ -2,6 +2,7 @@ from pathlib import Path
 import re
 
 fp = Path.cwd()/"csv_reports"/"profit-and-loss-usd.csv"
+# Create a file path to profit-and-loss-usd.csv
 file = Path.cwd()/"csv_reports"/"summary_report.txt"
 
 def profitloss_function(forex):
