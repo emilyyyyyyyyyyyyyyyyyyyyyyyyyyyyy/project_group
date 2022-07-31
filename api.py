@@ -29,4 +29,4 @@ def api_function():
         text.writelines(f"[REAL TIME CURRENCY RATE]: USD1 = SGD{ER}\n")
         # Print [REAL TIME CURRENCY RATE]: USD1 = SGD" for summary_report.txt
         return ER
-        # Return ER for forex in main.py
+        # Return ER for forex  main.py
