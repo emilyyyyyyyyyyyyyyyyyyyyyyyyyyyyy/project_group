@@ -7,7 +7,7 @@ file.touch()
 
 def api_function():
 # Create a function
-    with file.open(mode = "w" , encoding = 'UTF-8' , newline = '') as text:
+    with file.open(mode = "w" , encoding = 'UTF-8', newline = '') as text:
     # Open the summmary_report text file
 
         api_key = "6B4S1U6RBFT3Q19Q"
