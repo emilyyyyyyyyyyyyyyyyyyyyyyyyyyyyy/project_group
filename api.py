@@ -1,7 +1,7 @@
 import json, requests, re
 from pathlib import Path
 
-file = Path.cwd()/"csv_reports"/"summary_report.txt"
+file = Path.cwd()/"csv_report"/"summary_report.txt"
 file.touch()
 # Create the text file summary_report
 
