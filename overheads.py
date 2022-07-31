@@ -8,7 +8,7 @@ file = Path.cwd()/"csv_reports"/"summary_report.txt"
 
 
 def overhead_function(forex):
-# Create a function
+# Create a function that requires parameter: forex
     with file.open(mode = 'a', encoding = 'UTF-8', newline = '') as text:
     # Open the summary_report text file 
         with fp.open(mode='r', newline='') as overheads:
@@ -23,7 +23,7 @@ def overhead_function(forex):
                 line = line.split(",")
                 # Split the line on ","
                 category =  line[0].strip('"').strip('"').upper()
-                # Find the respective  categories
+                # Find the respective categories
                 overheads = re.findall(r'[0-9].+[0-9].+' , line[1]) 
                 # Find the respective overhead values
                 a = float(overheads[0])
