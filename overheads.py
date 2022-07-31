@@ -22,7 +22,7 @@ def overhead_function(forex):
             for line in overheads.readlines():
             # Read overheads-day-41.csv line by line 
                 line = line.split(",")
-                # Split the line on ","
+                # Split the line at ","
                 category =  line[0].strip('"').strip('"').upper()
                 # Find the respective categories
                 overheads = re.findall(r'[0-9].+[0-9].+' , line[1]) 
