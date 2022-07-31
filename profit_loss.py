@@ -15,8 +15,11 @@ def profitloss_function(forex):
                 line = re.findall(r'[0-9]+.', line)
                 npdiff = float(line[4]) - prevday
                 prevday = float(line[4])
-
+                
                 if npdiff <0:
                     npdiff = abs(npdiff)
                     text.writelines(f'[PROFIT DEFICIT] DAY: {line[0]} AMOUNT: SGD{npdiff*forex}\n')
+                    
+
+            #text.writelines('[NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY\n')
                 
