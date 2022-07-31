@@ -35,4 +35,4 @@ def overhead_function(forex):
                     max_value = a
                     # a becomes the new max value 
                     text.writelines(f"[HIGHEST OVERHEADS] {category}, EXPENSE: SGD{max_value*forex}\n")
-                    # Write [HIGHEST OVERHEADS] with the variable category, EXPENSE: SGD with the variable max_value 
+                    # Write [HIGHEST OVERHEADS] with the variable category, EXPENSE: SGD with the variable max_value with f strings
