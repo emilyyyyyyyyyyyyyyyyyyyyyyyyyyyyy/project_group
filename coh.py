@@ -18,11 +18,16 @@ def coh_function(forex):
             # Let variable prevday and cohdiff be 0
 
             for line in coh.readliness():
+                # Read cash-on-hand-usd.csv line by line
                 line = re.findall(r'[0-9]+.',line)
+                # Find all the Cash on hand data
                 cohdiff = float(line[1]) - prevday
+                # Make cohdiff be the line of data minus the previous line of data for cash on hand
                 prevday = float(line[1])
+                # Make prevday be the line of data for cash of hand
 
                 if cohdiff <0:
+            
                     cohdiff = abs(cohdiff)
                     text.writelines(f"[CASH DEFICIT] DAY: {line[0]} AMOUNT:SGD{cohdiff*forex}\n")
 
