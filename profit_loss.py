@@ -36,7 +36,7 @@ def profitloss_function(forex):
                     text.writelines(f'[PROFIT DEFICIT] DAY: {line[0]} AMOUNT: SGD{npdiff*forex}\n')
                     # Print [PROFIT DEFICIT] DAY: {line[0]} AMOUNT: SGD{npdiff*forex}
                     surplus=0
-                    # The variable surplus will be 0
+                    # Then variable surplus will be 0
                 
             if surplus==1:
             # If surplus is really 1

@@ -16,6 +16,8 @@ def coh_function(forex):
             prevday=0
             cohdiff=0
             # Let variable prevday and cohdiff be 0
+            cash=1
+            # Let variable cash be 1
 
             for line in coh.readlines():
                 # Read cash-on-hand-usd.csv line by line
@@ -32,5 +34,12 @@ def coh_function(forex):
                     # Make it positive
                     text.writelines(f"[CASH DEFICIT] DAY: {line[0]} AMOUNT:SGD{cohdiff*forex}\n")
                     # Write [CASH DEFICIT] DAY: with the variable line [0], AMOUNT: SGD with the variable cohdiff*forex"
+                    cash=0
+                    # Then variable cash will be 0
+            
+            if cash==1:
+            # If variable cash is really 1
+                text.writelines("[CASH SURPLUS] CASH ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY")
+                # Write [CASH SURPLUS] CASH ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY
 
                   
