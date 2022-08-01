@@ -16,7 +16,7 @@ def api_function():
         api = api.json()
         # Get the api url
 
-        api = json.dumps(api, indent=4)
+        api = json.dumps(api, indent = 4)
         # Arrange the output in a neat way
         pattern = 'Exchange Rate": ".+'
         api = re.search(pattern, api)
@@ -25,7 +25,7 @@ def api_function():
 
 
         ER = float(ER)
-        # Change ER to float instead of a string
+        # Make ER a float instead of a string
         text.writelines(f"[REAL TIME CURRENCY RATE]: USD1 = SGD{ER}\n")
         # Print [REAL TIME CURRENCY RATE]: USD1 = SGD" for summary_report.txt
         return ER
