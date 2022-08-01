@@ -27,8 +27,10 @@ def coh_function(forex):
                 # Make prevday be the line of data for cash of hand
 
                 if cohdiff <0:
-            
+                # If Cash on hand is less than 0
                     cohdiff = abs(cohdiff)
+                    # Make it positive
                     text.writelines(f"[CASH DEFICIT] DAY: {line[0]} AMOUNT:SGD{cohdiff*forex}\n")
+                    # Write [CASH DEFICIT] DAY: with the variable line [0], AMOUNT: SGD with the variable cohdiff*forex"
 
                   
