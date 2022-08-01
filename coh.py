@@ -10,3 +10,10 @@ def coh_function(forex):
             next(coh)
             prevday=0
             cohdiff=0
+
+            for line in coh.readliness():
+                line = re.findall(r'[0-9]+.',line)
+                cohdiff = float(line[1]) - prevday
+                prevday = float(line[1])
+
+                  
