@@ -15,7 +15,7 @@ def overhead_function(forex):
         with file_path.open(mode='r', newline='') as overheads:
         # Open the file
             next(overheads)
-            # Skip all the headers
+            # Skip all of the headers
             max_value = float(0)
             # Let variable max_value be float 0
 
