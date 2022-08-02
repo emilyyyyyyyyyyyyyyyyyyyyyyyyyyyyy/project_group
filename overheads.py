@@ -28,7 +28,7 @@ def overhead_function(forex):
                 overheads = re.findall(r'[0-9].+[0-9].+' , line[1]) 
                 # Find the respective overhead values
                 a = float(overheads[0])
-                # Let variable a be overhead values
+                # Let variable a be the overhead values
 
 
                 if a > max_value:
