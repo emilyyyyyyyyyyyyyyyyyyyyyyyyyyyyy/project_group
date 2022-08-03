@@ -18,8 +18,7 @@ def api_function():
 
             api = json.dumps(api, indent = 4)
             # Arrange the output in a neat way
-            pattern = 'Exchange Rate": ".+'
-            api = re.search(pattern, api)
+            api = re.search(r'Exchange Rate": ".+', api)
             ER = api.group(0).strip('Exchange Rate":"').strip('",')
             # Extract the exchange rate
 

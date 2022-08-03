@@ -41,8 +41,6 @@ def coh_function(forex):
                     except IndexError:
                         print("The data is not a number")
                     
-                    except ValueError:
-                        print("The data is not a number")
 
                 if cash==1:
                 # If variable cash is really 1
