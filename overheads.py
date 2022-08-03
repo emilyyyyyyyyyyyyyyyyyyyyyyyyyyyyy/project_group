@@ -17,7 +17,7 @@ def overhead_function(forex):
             next(overheads)
             # Skip the headers
             max_value = float(0)
-            # CreaLet variable max_value be float 0
+            # Let variable max_value be float 0
 
             try:
                 for line in overheads.readlines():
