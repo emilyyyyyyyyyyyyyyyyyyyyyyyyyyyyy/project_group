@@ -40,5 +40,5 @@ def overhead_function(forex):
                         # Write [HIGHEST OVERHEADS] with the variable category, EXPENSE: SGD with the variable max_value with f strings
             
             except IndexError:
-            #Except statement will execute IndexError if 
+            #Except statement will execute IndexError when try statement fails
                 print("The data is not a number")
