@@ -15,7 +15,7 @@ def overhead_function(forex):
         with file_path.open(mode='r', newline='') as overheads:
         # Open the file
             next(overheads)
-            # Skip all the headers
+            # Skip the headers
             max_value = float(0)
             # Let variable max_value be float 0
 
@@ -34,6 +34,6 @@ def overhead_function(forex):
                 if a > max_value:
                 # If a is more than max_value
                     max_value = a
-                    # a will overwrite the old value and become the new max value 
+                    # a will overwrite the old value, and become the new max value 
                     text.writelines(f"[HIGHEST OVERHEADS] {category}, EXPENSE: SGD{max_value*forex}\n")
                     # Write [HIGHEST OVERHEADS] with the variable category, EXPENSE: SGD with the variable max_value with f strings
