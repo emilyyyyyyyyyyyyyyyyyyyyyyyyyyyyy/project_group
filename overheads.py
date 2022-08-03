@@ -20,6 +20,7 @@ def overhead_function(forex):
                 # Let variable max_value be float 0
     
                 try:
+                # Create an exception
                     for line in overheads.readlines():
                     # Read overheads-day-41.csv line by line 
                         line = line.split(",")
@@ -41,6 +42,8 @@ def overhead_function(forex):
                 
                 except IndexError:
                     print("The data is not a number")
+                # Exception if the data in the csv file is not a number 
 
         except FileNotFoundError:
             print("The file is unavailable")
+        # Exception if the file is unavailable

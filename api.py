@@ -10,6 +10,7 @@ def api_function():
     with file.open(mode = "w" , encoding = 'UTF-8' , newline = '') as text:
     # Open the summmary_report text file
         try:
+        # Create an exception
             api_key = "6B4S1U6RBFT3Q19Q"
             url = f"https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=SGD&apikey={api_key}"
             api = requests.get(url)
@@ -31,3 +32,4 @@ def api_function():
         
         except ConnectionError:
             print("Please wait as connection is unstable")
+        # exception if the alphavantage website has an unstable connection

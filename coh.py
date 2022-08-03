@@ -10,6 +10,7 @@ def coh_function(forex):
     with file.open(mode = 'a', encoding = 'UTF-8', newline = '') as text:
         # Open the summary_report text file
         try:
+        # Create an exception
             with fp.open(mode='r', newline='') as coh:
             # Open the cash-on-hand-usd csv file
                 next(coh)
@@ -49,6 +50,7 @@ def coh_function(forex):
 
         except FileNotFoundError:
             print("The file is unavailable")
+        # Exception if the file is unavailable
 
                         
                 

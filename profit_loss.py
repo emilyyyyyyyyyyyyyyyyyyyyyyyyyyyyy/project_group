@@ -11,6 +11,7 @@ def profitloss_function(forex):
     with file.open(mode= 'a', encoding = 'UTF-8', newline = '') as text:
     # Open the summary_report text file
         try:
+        # Create an exception
             with fp.open(mode="r", newline='') as pal:
             # Open the file
                 next(pal)
@@ -22,8 +23,9 @@ def profitloss_function(forex):
                 # Let variable surplus be 1
 
                 for line in pal.readlines():
+                # Read profit-and-loss-usd.csv line by line
                     try:
-                    # Read profit-and-loss-usd.csv line by line
+                    # Create an exception
                         line = re.findall(r'[0-9]+.', line)
                         # Find all the net profit data
                         npdiff = float(line[4]) - prevday
@@ -42,10 +44,13 @@ def profitloss_function(forex):
                         
                     except IndexError:
                         print("The data is not a number")
+                    # Exception if the data in the csv file is not a number
 
                 if surplus==1:
-                    # If surplus is really 1
-                        text.writelines('[NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY\n')
-                        # Write [NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY
+                # If surplus is really 1
+                    text.writelines('[NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY\n')
+                    # Write [NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY
+
         except FileNotFoundError:
-                print("The file is unavailable")
+            print("The file is unavailable")
+        # Exception if the file is unvailable 
