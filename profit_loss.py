@@ -21,24 +21,28 @@ def profitloss_function(forex):
             # Let variable surplus be 1
 
             for line in pal.readlines():
-            # Read profit-and-loss-usd.csv line by line
-                line = re.findall(r'[0-9]+.', line)
-                # Find all the net profit data
-                npdiff = float(line[4]) - prevday
-                # Make npdiff be the line of data minus the previous line of data for net profit in profit and loss
-                prevday = float(line[4])
-                # Make prevday be the line of data for net profit in profit and loss
-                
-                if npdiff <0:
-                # If npdiff is less than 0
-                    npdiff = abs(npdiff)
-                    # Make it positive
-                    text.writelines(f'[PROFIT DEFICIT] DAY: {line[0]} AMOUNT: SGD{npdiff*forex}\n')
-                    # Print [PROFIT DEFICIT] DAY: {line[0]} AMOUNT: SGD{npdiff*forex}
-                    surplus=0
-                    # Then variable surplus will be 0
-                
+                try:
+                # Read profit-and-loss-usd.csv line by line
+                    line = re.findall(r'[0-9]+.', line)
+                    # Find all the net profit data
+                    npdiff = float(line[4]) - prevday
+                    # Make npdiff be the line of data minus the previous line of data for net profit in profit and loss
+                    prevday = float(line[4])
+                    # Make prevday be the line of data for net profit in profit and loss
+                    
+                    if npdiff <0:
+                    # If npdiff is less than 0
+                        npdiff = abs(npdiff)
+                        # Make it positive
+                        text.writelines(f'[PROFIT DEFICIT] DAY: {line[0]} AMOUNT: SGD{npdiff*forex}\n')
+                        # Print [PROFIT DEFICIT] DAY: {line[0]} AMOUNT: SGD{npdiff*forex}
+                        surplus=0
+                        # Then variable surplus will be 0
+                    
+                except IndexError:
+                    print("The data is not a number")
+
             if surplus==1:
-            # If surplus is really 1
-                text.writelines('[NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY\n')
-                # Write [NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY
+                # If surplus is really 1
+                    text.writelines('[NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY\n')
+                    # Write [NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY
