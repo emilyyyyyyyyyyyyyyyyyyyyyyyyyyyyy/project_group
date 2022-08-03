@@ -34,14 +34,14 @@ def coh_function(forex):
                         # If Cash on hand is less than 0
                             cohdiff = abs(cohdiff)
                             # Make it positive
-                            text.writelines(f"[CASH DEFICIT] DAY: {line[0]} AMOUNT:SGD{cohdiff*forex}\n")
+                            text.writelines(f"[CASH DEFICIT] DAY: {line[0]} AMOUNT:SGD{round(cohdiff*forex,1)}\n")
                             # Write [CASH DEFICIT] DAY: with the variable line [0], AMOUNT: SGD with the variable cohdiff*forex"
                             cash=0
                             # Then variable cash will be 0
 
                     except IndexError:
                         print("The data is not a number")
-                    
+                    # Exception if the data in the csv file is not a number          
 
                 if cash==1:
                 # If variable cash is really 1
