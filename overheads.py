@@ -8,9 +8,8 @@ file = Path.cwd()/"csv_reports"/"summary_report.txt"
 
 
 def overhead_function(forex):
-# Create a function 
-"""
-one parameter required: forex
+# Create a function that requires forex as a parameter
+
     with file.open(mode = 'a', encoding = 'UTF-8', newline = '') as text:
     # Open the summary_report text file 
         with file_path.open(mode='r', newline='') as overheads:
