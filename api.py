@@ -1,5 +1,5 @@
 import json, requests, re
-from pathlib import Path
+from pathlib import Pat
 
 file = Path.cwd()/"csv_reports"/"summary_report.txt"
 file.touch()
