@@ -24,7 +24,7 @@ def api_function():
         # Extract the exchange rate
 
 
-        ER = float(ER)
+        ER = float(E)
         # Make ER a float instead of a string
         text.writelines(f"[REAL TIME CURRENCY RATE]: USD1 = SGD{ER}\n")
         # Print [REAL TIME CURRENCY RATE]: USD1 = SGD" for summary_report.txt
