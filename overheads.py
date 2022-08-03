@@ -3,7 +3,7 @@ import re
 
 file_path = Path.cwd()/"csv_reports"/"overheads-day-42.csv"
 # Create a file path to overheads-day-41.csv
-file = Path.cwd()/"csv_reports"/"summary_report.txt"
+file = Path.cwd()/"summary_report.txt"
 # Create a file path to file summary_report 
 
 
@@ -37,7 +37,7 @@ def overhead_function(forex):
                         # If a is more than max_value
                             max_value = a
                             # a will overwrite the old value, and become the new max value 
-                            text.writelines(f"[HIGHEST OVERHEADS] {category}, EXPENSE: SGD{max_value*forex}\n")
+                            text.writelines(f"[HIGHEST OVERHEADS] {category}, EXPENSE: SGD{round(max_value*forex,1)}\n")
                             # Write [HIGHEST OVERHEADS] with the variable category, EXPENSE: SGD with the variable max_value with f strings
                 
                 except IndexError:

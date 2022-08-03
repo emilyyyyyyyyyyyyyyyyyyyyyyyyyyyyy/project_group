@@ -3,7 +3,7 @@ import re
 
 fp = Path.cwd()/"csv_reports"/"profit-and-loss-usd.csv"
 # Create a file path to profit-and-loss-usd.csv
-file = Path.cwd()/"csv_reports"/"summary_report.txt"
+file = Path.cwd()/"summary_report.txt"
 # Create a file path to file summary_report
 
 def profitloss_function(forex):
@@ -37,7 +37,7 @@ def profitloss_function(forex):
                         # If npdiff is less than 0
                             npdiff = abs(npdiff)
                             # Make it positive
-                            text.writelines(f'[PROFIT DEFICIT] DAY: {line[0]} AMOUNT: SGD{npdiff*forex}\n')
+                            text.writelines(f'[PROFIT DEFICIT] DAY: {line[0]} AMOUNT: SGD{round(npdiff*forex,1)}\n')
                             # Print [PROFIT DEFICIT] DAY: {line[0]} AMOUNT: SGD{npdiff*forex}
                             surplus=0
                             # Then variable surplus will be 0
