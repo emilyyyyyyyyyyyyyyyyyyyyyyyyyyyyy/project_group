@@ -27,7 +27,7 @@ def overhead_function(forex):
                     category =  line[0].strip('"').strip('"').upper()
                     # Find the categories
                     overheads = re.findall(r'[0-9].+[0-9].+' , line[1]) 
-                    # Find the respective overhead values
+                    # Find the overhead values
                     a = float(overheads[0])
                     # Let variable a be the overhead values
 
